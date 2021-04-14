@@ -1,0 +1,190 @@
+@import "../global";
+
+#nav-bar {
+    position: fixed;
+    display: flex;
+    width: calc(100% - 70px);
+    height: 65px;
+    top: 0px;
+    left: 0px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 0px 35px;
+    z-index: 100;
+
+    .home-button {
+        padding-top: 5px;
+        margin-right: 15px;
+
+        img {
+            width: auto;
+            height: 40px;
+        }
+    }
+
+    .bar {
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+
+        .nav-bar-button {
+            position: relative;
+            color: white;
+            font-family: "Apercu Pro";
+            font-size: 18px;
+            text-decoration: none;
+            margin: 0px 25px;
+            transition: 0.5s;
+
+            &::before {
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                bottom: -5px;
+                left: 0px;
+                background-color: var(--accent-color);
+                content: "";
+                transform: scaleX(0);
+                transition: 0.5s;
+            }
+
+            &:hover {
+                color: var(--accent-color);
+
+                &::before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+
+    .menu-button {
+        position: relative;
+        width: 16px;
+        margin-left: auto;
+        cursor: pointer;
+        transition: 0.5s;
+
+        @media screen and (min-width: 501px) {
+            display: none;
+        }
+
+        &.open {
+            transform: rotate(90deg) scale(0.8);
+
+            .dot-border {
+                border-color: var(--accent-color);
+            }
+
+            .dot {
+                background-color: var(--accent-color);
+            }
+        }
+
+        .dot-border {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            top: -2px;
+            left: -10px;
+            border: 2px #ffffff50 solid;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+
+        .dot {
+            width: 4px;
+            height: 4px;
+            background-color: #ffffffbb;
+            border-radius: 50%;
+            margin-top: 5px;
+            transition: 0.5s;
+            @include center;
+        }
+    }
+
+    .menu {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        height: calc(100vh - 55px);
+        top: 65px;
+        left: 0px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        pointer-events: none;
+
+        flex-direction: column;
+
+        @media screen and (min-width: 501px) {
+            display: none;
+        }
+
+        &.open {
+            pointer-events: all;
+        }
+
+        .menu-background {
+            position: absolute;
+            width: 150%;
+            height: 0px;
+            top: 0px;
+            left: -25%;
+            background-image: linear-gradient(var(--primary-color), #3b48ac);
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 100%;
+            z-index: -1;
+            transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            &.open {
+                height: 100%;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                box-shadow: 0px 500px 0px 0px var(--accent-color);
+            }
+        }
+
+        .menu-content {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: 0.25s;
+
+            &.open {
+                opacity: 1;
+                transform: none;
+                transition: 0.5s 0.25s;
+            }
+
+            .menu-menu-button {
+                display: inline-flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                text-decoration: none;
+                margin-bottom: 35px;
+                @include center;
+
+                .button-icon {
+                    width: auto;
+                    height: 50px;
+                }
+
+                .button-text {
+                    color: white;
+                    font-family: "Apercu Pro";
+                    font-size: 35px;
+                    margin: 0px;
+                    margin-left: 15px;
+                }
+            }
+
+            .github-icon img {
+                width: auto;
+                height: 50px;
+                margin-top: 85px;
+                @include center;
+            }
+        }
+    }
+}

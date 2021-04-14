@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+
+# Env
+.env
+
+# SSL Certificate
+public.pem
+private.key
+
+# Deploy Key
+deploy_key
+
+# Next.JS
+.next
+
+# DS_Store
+.DS_Store

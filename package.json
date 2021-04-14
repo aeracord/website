@@ -1,0 +1,24 @@
+{
+    "name": "aeracord-website",
+    "description": "The Aeracord website",
+    "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/APixelVisuals/aeracord-website"
+    },
+    "scripts": {
+        "dev": "node index",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@apixelvisuals/typedoc-frontend": "^1.0.4",
+        "@zeit/next-sass": "^1.0.1",
+        "dotenv": "^8.2.0",
+        "highlight.js": "^10.7.2",
+        "next": "^9.3.4",
+        "node-sass": "^4.14.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    }
+}
