@@ -14,6 +14,7 @@ const DocsPage = () => (
 
         <Docs
             url="https://raw.githubusercontent.com/APixelVisuals/aeracord/master/docs/docs.json"
+            defaultPath="/classes/Client"
             colors={{
                 background: "#38639d",
                 backgroundDark: "#142237",
@@ -21,7 +22,8 @@ const DocsPage = () => (
                 accent: "#e9ba42",
                 text: "#215cf2",
                 textLight: "#5d84e4",
-                textLighter: "#7295eb"
+                textLighter: "#7295eb",
+                codeblockBackground: "#4979c045"
             }}
         />
 

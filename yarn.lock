@@ -53,10 +53,10 @@
   dependencies:
     cross-fetch "3.0.6"
 
-"@apixelvisuals/typedoc-frontend@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@apixelvisuals/typedoc-frontend/-/typedoc-frontend-1.0.4.tgz#be30911556670f37c4da38c9471fbc8e6b846f13"
-  integrity sha512-MIkiQZShFSJ6zKURD9erx3qdH1Och4OBGlk9ficGpC/9rOvqbfMd0MugPvk9b4vVcN1vfmN5bTLm8zi6vBbV3Q==
+"@apixelvisuals/typedoc-frontend@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@apixelvisuals/typedoc-frontend/-/typedoc-frontend-1.1.0.tgz#1f8b7e8af780caf55ab09abf6935ac3db550ee89"
+  integrity sha512-eJBVCgnzMLrJnahuMTqk13XnRmozRBEjLr7Q8jLfCvia9MTqxgEkVtoppyx8+ObH5NEf/0FZgJIPL1kC9OMZhQ==
   dependencies:
     "@babel/runtime" "^7.13.10"
     highlight.js "^10.7.2"
