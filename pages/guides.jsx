@@ -51,14 +51,6 @@ const GuidesPage = () => (
                             slug: "permissions",
                             url: "https://raw.githubusercontent.com/APixelVisuals/aeracord/master/guides/permissions.md",
                             className: "thin"
-                        },
-                        {
-                            name: "Audit Logs",
-                            description: "Fetch and filter a guild's audit logs",
-                            icon: "/assets/guides/file.svg",
-                            slug: "audit-logs",
-                            url: "https://raw.githubusercontent.com/APixelVisuals/aeracord/master/guides/audit-logs.md",
-                            className: "thin"
                         }
                     ]
                 },

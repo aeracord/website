@@ -13,7 +13,7 @@
         }
 
         .thin {
-            grid-column: span 4;
+            grid-column: span 8;
         }
 
         @media screen and (max-width: 1400px) {
@@ -24,7 +24,7 @@
             }
 
             .thin {
-                grid-column: span 3;
+                grid-column: span 6;
             }
         }
 
@@ -37,7 +37,7 @@
             }
 
             .main-small, .thin {
-                grid-column: span 1;
+                grid-column: span 2;
             }
         }
 
