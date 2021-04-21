@@ -53,15 +53,16 @@
   dependencies:
     cross-fetch "3.0.6"
 
-"@apixelvisuals/typedoc-frontend@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@apixelvisuals/typedoc-frontend/-/typedoc-frontend-1.1.1.tgz#6549b74aecd37c28287f96a271b048c287bfdef3"
-  integrity sha512-NR1M9q2W/91FLJISCkRcGhNieTJIMtEDJDmPvgP708DKBECAUNH2udLzmkvEp1KTahGhQT/AbXU12oZZXCdqgg==
+"@apixelvisuals/typedoc-frontend@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@apixelvisuals/typedoc-frontend/-/typedoc-frontend-1.2.0.tgz#af6289103cff2b8410dbd4e8fa9f864767ef1c78"
+  integrity sha512-BYcdk5kRSfT4Zc4wwDJhogK1y3r+AYzuimUABv71GD8s+H4WYzMDKLTATxobNchffAMZoF5pZLQ+bxry33IkIA==
   dependencies:
     "@babel/runtime" "^7.13.10"
     highlight.js "^10.7.2"
     node-fetch "^2.6.1"
     react-markdown "^5.0.3"
+    react-switch "^6.0.0"
 
 "@babel/code-frame@7.10.4":
   version "7.10.4"
@@ -5112,6 +5113,13 @@ react-refresh@0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
+
+react-switch@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/react-switch/-/react-switch-6.0.0.tgz#bd4a2dea08f211b8a32e55e8314fd44bc1ec947e"
+  integrity sha512-QV3/6eRK5/5epdQzIqvDAHRoGLbCv/wDpHUi6yBMXY1Xco5XGuIZxvB49PHoV1v/SpEgOCJLD/Zo43iic+aEIw==
+  dependencies:
+    prop-types "^15.7.2"
 
 react@^17.0.2:
   version "17.0.2"
