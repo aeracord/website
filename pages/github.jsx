@@ -5,7 +5,7 @@ const GitHub = () => (
     <Head
         title="GitHub - Aeracord"
         description="Aeracord, a lightweight library for the Discord API with flexible caching"
-        redirect="https://github.com/APixelVisuals/aeracord"
+        redirect="https://github.com/aeracord/aeracord"
     />
 );
 
