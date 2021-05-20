@@ -1,0 +1,23 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Decrypt deploy key"
+        env:
+          DEPLOY_KEY_PASSPHRASE: ${{ secrets.DEPLOY_KEY_PASSPHRASE }}
+          KNOWN_HOST: ${{ secrets.KNOWN_HOST }}
+        run: ./.github/scripts/decrypt_deploy_key.sh
+
+      - name: "Deploy"
+        env:
+          IP: ${{ secrets.IP }}
+        run: ssh -i $HOME/secrets/deploy_key ci@$IP "cd /var/aeracord-website && git pull && docker-compose up -d --build"
