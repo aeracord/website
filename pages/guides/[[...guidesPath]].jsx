@@ -76,6 +76,20 @@ const GuidesPage = () => (
                     ]
                 },
                 {
+                    name: "Advanced",
+                    className: "advanced",
+                    guides: [
+                        {
+                            name: "Holding Events",
+                            description: "Learn how to hold events after the ready event",
+                            icon: "/assets/guides/box.svg",
+                            slug: "holding-events",
+                            url: "https://raw.githubusercontent.com/APixelVisuals/aeracord/master/guides/holding-events.md",
+                            className: "main"
+                        }
+                    ]
+                },
+                {
                     name: "Contributing",
                     className: "contributing",
                     guides: [
