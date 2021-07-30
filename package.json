@@ -12,7 +12,7 @@
         "start": "next start -p 3004"
     },
     "dependencies": {
-        "@apixelvisuals/typedoc-frontend": "^1.2.0",
+        "@apixelvisuals/typedoc-frontend": "^1.2.1",
         "dotenv": "^8.2.0",
         "highlight.js": "^10.7.2",
         "next": "^11.0.1",
