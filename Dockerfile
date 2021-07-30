@@ -4,10 +4,9 @@ WORKDIR /aeracord-website
 
 COPY . .
 
-RUN npm install
-
-RUN npm run build
+RUN yarn
+RUN yarn build
 
 EXPOSE 3004
 
-CMD ["node", "index.js"]
+CMD ["yarn", "start"]
