@@ -1,0 +1,200 @@
+// Fonts
+@font-face {
+    font-family: "Apercu Pro Bold";
+    src: url(/assets/apercu-pro-bold.ttf);
+}
+
+@font-face {
+    font-family: "Apercu Pro";
+    src: url(/assets/apercu-pro.ttf);
+}
+
+@font-face {
+    font-family: "Apercu Pro Mono";
+    src: url(/assets/apercu-pro-mono.ttf);
+}
+
+// Variables
+:root {
+    --background-color: #2c5387;
+
+    --background-color-dark: #142237;
+    --primary-color: #076aff;
+    --accent-color: #e9ba42;
+    --text-color: #215cf2;
+    --text-color-light: #5d84e4;
+    --text-color-lighter: #7295eb;
+    --codeblock-background-color: #4979c045;
+}
+
+// HTML and body
+html {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0px;
+}
+
+// Buttons
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #2e3138;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+.codeblock-content {
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+    }
+}
+
+// Image alt text
+img {
+    color: white;
+    font-family: "Apercu Pro";
+}
+
+// Typedoc Frontend Overwrites
+.basics {
+    grid-template-columns: repeat(8, auto);
+
+    .main {
+        grid-column: span 4;
+    }
+
+    .main-small {
+        grid-column: span 2;
+    }
+
+    .thin {
+        grid-column: span 8;
+    }
+
+    @media screen and (max-width: 1400px) {
+        grid-template-columns: repeat(6, auto);
+
+        .main,
+        .main-small {
+            grid-column: span 2;
+        }
+
+        .thin {
+            grid-column: span 6;
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+        grid-template-columns: repeat(2, auto);
+
+        .main {
+            grid-column: span 2;
+            grid-row: 1;
+        }
+
+        .main-small,
+        .thin {
+            grid-column: span 2;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        grid-template-columns: repeat(1, auto);
+
+        .main {
+            grid-column: span 1;
+            grid-row: 1;
+        }
+
+        .main-small,
+        .thin {
+            grid-column: span 1;
+        }
+    }
+}
+
+.caching {
+    grid-template-columns: repeat(2, auto);
+
+    .main {
+        grid-column: span 1;
+    }
+
+    @media screen and (max-width: 700px) {
+        grid-template-columns: repeat(1, auto);
+    }
+}
+
+.contributing {
+    grid-template-columns: repeat(12, auto);
+
+    .main {
+        grid-column: span 6;
+    }
+
+    .main-small {
+        grid-column: span 3;
+    }
+
+    .other {
+        grid-column: span 4;
+    }
+
+    @media screen and (max-width: 1400px) {
+        grid-template-columns: repeat(3, auto);
+
+        .main,
+        .main-small,
+        .other {
+            grid-column: span 1;
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+        grid-template-columns: repeat(2, auto);
+
+        .main {
+            grid-column: span 2;
+            grid-row: 1;
+        }
+
+        .main-small,
+        .other {
+            grid-column: span 1;
+
+            &.last {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        grid-template-columns: repeat(1, auto);
+
+        .main {
+            grid-column: span 1;
+            grid-row: 1;
+        }
+
+        .main-small,
+        .other {
+            grid-column: span 1;
+
+            &.last {
+                grid-column: span 1;
+            }
+        }
+    }
+}

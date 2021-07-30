@@ -1,10 +1,10 @@
 import React from "react";
 import { Docs } from "@apixelvisuals/typedoc-frontend";
-import Head from "../components/Head";
-import NavBar from "../components/NavBar";
+import Head from "../../components/Head";
+import NavBar from "../../components/NavBar";
 
 const DocsPage = () => (
-    <div id="docs">
+    <>
 
         <Head
             title="Docs - Aeracord"
@@ -27,7 +27,7 @@ const DocsPage = () => (
             }}
         />
 
-    </div>
+    </>
 );
 
 export default DocsPage;

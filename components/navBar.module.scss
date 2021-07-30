@@ -1,6 +1,10 @@
-@import "../global";
+// Mixins
+@mixin center {
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
 
-#nav-bar {
+.nav_bar {
     position: fixed;
     display: flex;
     width: calc(100% - 70px);
@@ -14,7 +18,7 @@
     padding: 0px 35px;
     z-index: 100;
 
-    .home-button {
+    .home_button {
         padding-top: 5px;
         margin-right: 15px;
 
@@ -29,7 +33,7 @@
             display: none;
         }
 
-        .nav-bar-button {
+        .nav_bar_button {
             position: relative;
             color: white;
             font-family: "Apercu Pro";
@@ -60,7 +64,7 @@
         }
     }
 
-    .menu-button {
+    .menu_button {
         position: relative;
         width: 16px;
         margin-left: auto;
@@ -83,7 +87,7 @@
             }
         }
 
-        .dot-border {
+        .dot_border {
             position: absolute;
             width: 32px;
             height: 32px;
@@ -126,7 +130,7 @@
             pointer-events: all;
         }
 
-        .menu-background {
+        .menu_background {
             position: absolute;
             width: 150%;
             height: 0px;
@@ -146,7 +150,7 @@
             }
         }
 
-        .menu-content {
+        .menu_content {
             opacity: 0;
             transform: translateY(-10px);
             transition: 0.25s;
@@ -157,7 +161,7 @@
                 transition: 0.5s 0.25s;
             }
 
-            .menu-menu-button {
+            .menu_menu_button {
                 display: inline-flex;
                 flex-wrap: nowrap;
                 align-items: center;
@@ -165,12 +169,12 @@
                 margin-bottom: 35px;
                 @include center;
 
-                .button-icon {
+                .button_icon {
                     width: auto;
                     height: 50px;
                 }
 
-                .button-text {
+                .button_text {
                     color: white;
                     font-family: "Apercu Pro";
                     font-size: 35px;
@@ -179,7 +183,7 @@
                 }
             }
 
-            .github-icon img {
+            .github_icon img {
                 width: auto;
                 height: 50px;
                 margin-top: 85px;

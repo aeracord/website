@@ -1,11 +1,11 @@
 import React from "react";
-import "./horizontalComponent.scss";
+import styles from "./horizontalComponent.module.scss";
 
 const HorizontalComponent = props => (
-    <div id="horizontal-component" className={props.reflected && "reflected"}>
+    <div className={`${styles.horizontal_component} ${props.reflected && styles.reflected}`}>
 
-        <div className="half">{props.left}</div>
-        <div className="half">{props.right}</div>
+        <div className={styles.half}>{props.left}</div>
+        <div className={styles.half}>{props.right}</div>
 
     </div>
 );

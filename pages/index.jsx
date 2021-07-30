@@ -3,10 +3,10 @@ import { Codeblock } from "@apixelvisuals/typedoc-frontend";
 import Head from "../components/Head";
 import NavBar from "../components/NavBar";
 import HorizontalComponent from "../components/HorizontalComponent";
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const Index = () => (
-    <div id="index">
+    <div className={styles.index}>
 
         <Head
             title="Aeracord"
@@ -14,23 +14,23 @@ const Index = () => (
         />
         <NavBar />
 
-        <div className="intro-wrapper">
+        <div className={styles.intro_wrapper}>
             <HorizontalComponent
                 left={(
-                    <div className="intro">
+                    <div className={styles.intro}>
 
-                        <p className="title">Aeracord</p>
+                        <p className={styles.title}>Aeracord</p>
 
-                        <p className="description">Aeracord is a lightweight library for the Discord API with flexible caching.</p>
+                        <p className={styles.description}>Aeracord is a lightweight library for the Discord API with flexible caching.</p>
 
-                        <div className="buttons">
+                        <div className={styles.buttons}>
 
-                            <button className="button" onClick={() => window.scrollTo({
+                            <button className={styles.button} onClick={() => window.scrollTo({
                                 top: document.querySelector(".features").getBoundingClientRect().top + window.pageYOffset,
                                 behavior: "smooth"
                             })}>Features</button>
-                            <a href="/docs" className="main-button">Documentation</a>
-                            <a href="/github" className="button" target="_blank">GitHub</a>
+                            <a href="/docs" className={styles.main_button}>Documentation</a>
+                            <a href="/github" className={styles.button} target="_blank">GitHub</a>
 
                         </div>
 
@@ -57,81 +57,81 @@ const Index = () => (
             />
         </div>
 
-        <div className="features">
+        <div className={styles.features}>
 
-            <div className="feature-wrapper">
+            <div className={styles.feature_wrapper}>
                 <HorizontalComponent
                     left={(
-                        <div className="feature">
+                        <div className={styles.feature}>
 
-                            <p className="title">Flexible Caching</p>
+                            <p className={styles.title}>Flexible Caching</p>
 
-                            <p className="description">Aeracord aims to be flexible with what gets cached. Control not only what gets cached, but also how long objects stay cached, and when they should automatically be cached.</p>
+                            <p className={styles.description}>Aeracord aims to be flexible with what gets cached. Control not only what gets cached, but also how long objects stay cached, and when they should automatically be cached.</p>
 
-                            <div className="learn-more">
-                                <p className="text">Learn more</p>
-                                <a href="/guides/caching" className="button">Caching Objects</a>
+                            <div className={styles.learn_more}>
+                                <p className={styles.text}>Learn more</p>
+                                <a href="/guides/caching" className={styles.button}>Caching Objects</a>
                             </div>
 
                         </div>
                     )}
                     right={(
-                        <img src="/assets/flexible-caching.svg" alt="Flexible caching" className="image" />
+                        <img src="/assets/flexible-caching.svg" alt="Flexible caching" className={styles.image} />
                     )}
                 />
             </div>
 
-            <div className="feature-wrapper">
+            <div className={styles.feature_wrapper}>
                 <HorizontalComponent
                     left={(
-                        <div className="feature">
+                        <div className={styles.feature}>
 
-                            <p className="title">Object Oriented</p>
+                            <p className={styles.title}>Object Oriented</p>
 
-                            <p className="description">Aeracord has object-oriented classes to allow for making simple and logical calls to the Discord API. However, lower-level methods are also available, making Aeracord flexible based on what data is available.</p>
+                            <p className={styles.description}>Aeracord has object-oriented classes to allow for making simple and logical calls to the Discord API. However, lower-level methods are also available, making Aeracord flexible based on what data is available.</p>
 
-                            <div className="learn-more">
-                                <p className="text">Learn more</p>
-                                <a href="/docs" className="button">Documentation</a>
+                            <div className={styles.learn_more}>
+                                <p className={styles.text}>Learn more</p>
+                                <a href="/docs" className={styles.button}>Documentation</a>
                             </div>
 
                         </div>
                     )}
                     right={(
-                        <img src="/assets/object-oriented.svg" alt="Object oriented" className="image" />
+                        <img src="/assets/object-oriented.svg" alt="Object oriented" className={styles.image} />
                     )}
                     reflected={true}
                 />
             </div>
 
-            <div className="feature-wrapper">
+            <div className={styles.feature_wrapper}>
                 <HorizontalComponent
                     left={(
-                        <div className="feature">
+                        <div className={styles.feature}>
 
-                            <p className="title">Interactions</p>
+                            <p className={styles.title}>Interactions</p>
 
-                            <p className="description">Aeracord has support for interactions, AKA slash commands. You can manage your bot's slash commands as well as respond to them with the <a href="/docs/classes/Client#interactionCreate"><code>interactionCreate</code></a> event.</p>
+                            <p className={styles.description}>Aeracord has support for interactions, AKA slash commands. You can manage your bot's slash commands as well as respond to them with the <a href="/docs/classes/Client#interactionCreate"><code>interactionCreate</code></a> event.</p>
 
-                            <div className="learn-more">
-                                <p className="text">Learn more</p>
-                                <a href="/guides/interactions" className="button">Interactions</a>
+                            <div className={styles.learn_more}>
+                                <p className={styles.text}>Learn more</p>
+                                <a href="/guides/interactions" className={styles.button}>Interactions</a>
                             </div>
 
                         </div>
                     )}
                     right={(
-                        <img src="/assets/interactions.svg" alt="Interactions" className="image" />
+                        <img src="/assets/interactions.svg" alt="Interactions" className={styles.image} />
                     )}
                 />
             </div>
 
         </div>
 
-        <img src="/assets/wave.svg" className="wave" />
-        <div className="bottom-links">
-            <a href="/docs" className="button">Documentation</a>
-            <a href="/github" className="link" target="_blank">GitHub</a>
+        <img src="/assets/wave.svg" className={styles.wave} />
+        <div className={styles.bottom_links}>
+            <a href="/docs" className={styles.button}>Documentation</a>
+            <a href="/github" className={styles.link} target="_blank">GitHub</a>
         </div>
 
     </div>

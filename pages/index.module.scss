@@ -1,7 +1,11 @@
-@import "../global";
+// Mixins
+@mixin center {
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
 
-#index {
-    .intro-wrapper {
+.index {
+    .intro_wrapper {
         width: 100%;
         height: calc(100vh - 65px);
         margin-top: 65px;
@@ -47,7 +51,7 @@
                     flex-direction: column;
                 }
 
-                .main-button {
+                .main_button {
                     color: white;
                     font-family: "Apercu Pro";
                     font-size: 20px;
@@ -79,7 +83,7 @@
         }
     }
 
-    .feature-wrapper {
+    .feature_wrapper {
         width: 100%;
         height: calc(100vh - 65px);
         margin-top: 65px;
@@ -125,7 +129,7 @@
                 }
             }
 
-            .learn-more {
+            .learn_more {
                 display: inline-block;
                 margin-top: 65px;
                 @include center;
@@ -169,7 +173,7 @@
         margin-bottom: -10px;
     }
 
-    .bottom-links {
+    .bottom_links {
         display: flex;
         flex-wrap: nowrap;
         align-items: center;

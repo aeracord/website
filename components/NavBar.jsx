@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./navBar.scss";
+import styles from "./navBar.module.scss";
 
 const NavBar = () => {
 
@@ -7,39 +7,39 @@ const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div id="nav-bar">
+        <div className={styles.nav_bar}>
 
-            <a href="/" className="home-button"><img src="/assets/logo.svg" alt="Aeracord logo" /></a>
+            <a href="/" className={styles.home_button}><img src="/assets/logo.svg" alt="Aeracord logo" /></a>
 
-            <div className="bar">
-                <a href="/docs" className="nav-bar-button">Docs</a>
-                <a href="/guides" className="nav-bar-button">Guides</a>
-                <a href="/github" className="nav-bar-button" target="_blank">GitHub</a>
+            <div className={styles.bar}>
+                <a href="/docs" className={styles.nav_bar_button}>Docs</a>
+                <a href="/guides" className={styles.nav_bar_button}>Guides</a>
+                <a href="/github" className={styles.nav_bar_button} target="_blank">GitHub</a>
             </div>
 
-            <div className={`menu-button ${menuOpen && "open"}`} onClick={() => setMenuOpen(!menuOpen)}>
-                <div className="dot-border" />
-                <div className="dot" />
-                <div className="dot" />
-                <div className="dot" />
+            <div className={`${styles.menu_button} ${menuOpen && styles.open}`} onClick={() => setMenuOpen(!menuOpen)}>
+                <div className={styles.dot_border} />
+                <div className={styles.dot} />
+                <div className={styles.dot} />
+                <div className={styles.dot} />
             </div>
 
-            <div className={`menu ${menuOpen && "open"}`}>
+            <div className={`${styles.menu} ${menuOpen && styles.open}`}>
 
-                <div className={`menu-background ${menuOpen && "open"}`} />
+                <div className={`${styles.menu_background} ${menuOpen && styles.open}`} />
 
-                <div className={`menu-content ${menuOpen && "open"}`}>
+                <div className={`${styles.menu_content} ${menuOpen && styles.open}`}>
 
-                    <a href="/docs" className="menu-menu-button">
-                        <img className="button-icon" src="/assets/page.svg" alt="Page icon" />
-                        <p className="button-text">Docs</p>
+                    <a href="/docs" className={styles.menu_menu_button}>
+                        <img className={styles.button_icon} src="/assets/page.svg" alt="Page icon" />
+                        <p className={styles.button_text}>Docs</p>
                     </a>
-                    <a href="/guides" className="menu-menu-button">
-                        <img className="button-icon" src="/assets/book.svg" alt="Book icon" />
-                        <p className="button-text">Guides</p>
+                    <a href="/guides" className={styles.menu_menu_button}>
+                        <img className={styles.button_icon} src="/assets/book.svg" alt="Book icon" />
+                        <p className={styles.button_text}>Guides</p>
                     </a>
 
-                    <a href="/github" className="github-icon" target="_blank"><img src="/assets/github.svg" alt="GitHub logo" /></a>
+                    <a href="/github" className={styles.github_icon} target="_blank"><img src="/assets/github.svg" alt="GitHub logo" /></a>
 
                 </div>
 
