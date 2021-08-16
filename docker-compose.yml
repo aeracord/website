@@ -3,12 +3,11 @@ version: "3"
 services:
   aeracord-website:
     container_name: aeracord-website
-    image: node:12
+    image: node:14
     build: .
     restart: always
     ports:
       - "3004:3004"
     volumes:
-      - /var/aeracord-website/.env:/aeracord-website/.env
       - /var/aeracord-website/public.pem:/aeracord-website/public.pem
       - /var/aeracord-website/private.key:/aeracord-website/private.key
